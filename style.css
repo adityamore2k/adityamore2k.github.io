@@ -177,13 +177,131 @@ nav li a{
 /* project section */
 
 #projects{
-    margin: 5px 0px 0px 0px;
     padding:5px;
     background-color:#12131a;
     width:100vw;
     color:white;
+    /* height:40vh; */
+
+    height: 300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
 }
 
+.container {
+    background: #de2d26;
+    width: 100vw;
+    height: 300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    font-size: 1.5em;
+    margin-bottom: 30px;
+  }
+  
+  .carousel {
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: top;
+    height: 50px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .inner {
+      animation: scroll 3s ease-in-out infinite;
+  }
+  .element {
+    font-size: inherit;
+    text-shadow: 0px 2px 2px #fba09d;
+  }
+  
+  @keyframes scroll {
+    0%, 20% {
+          transform: translateY(0);
+      }
+      25%,45% {
+          transform: translateY(-32px);
+      }
+      50%,70% {
+          transform: translateY(-64px);
+      }
+      75%,95% {
+          transform: translateY(-96px);
+      }
+      100% {
+          transform: translateY(-124px);
+      }
+  }
+
+.changing-text{
+    display:inline;
+    height:150px;
+    background:none;
+} 
+
+
+.projects-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .project-items {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .carousel-items::-webkit-scrollbar {
+    display: none;
+  }
+  .item {
+    flex-shrink: 0;
+    width: 200px;
+    height: 200px;
+    margin-right: 20px;
+    background-color: #ddd;
+  }
+  
+  .project-buttons {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .prev-button,
+  .next-button {
+    padding: 10px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .prev-button {
+    margin-bottom: 20px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .item {
+      width: 150px;
+      height: 150px;
+    }
+  }
+  
+/* contact section */
 #contact{
     background-color:#12131a;
 

@@ -9,6 +9,8 @@ jQuery(document).ready(function() {
   let i = 0;
   let target = document.getElementById("anim-typewriter");
   let text = target.innerHTML;
+  text = text.replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&sol;/g, "/");
+  console.log(text);
   target.innerHTML = ' ';
   let speed = 75; //speed duration of effect in millisec
 
@@ -63,3 +65,21 @@ jQuery(document).ready(function() {
   })
 
 vSlide.play();
+
+const carouselItems = document.querySelector('.carousel-items');
+const prevButton = document.querySelector('.prev-button');
+const nextButton = document.querySelector('.next-button');
+
+prevButton.addEventListener('click', () => {
+  carouselItems.scrollBy({
+    left: -250,
+    behavior: 'smooth'
+  });
+});
+
+nextButton.addEventListener('click', () => {
+  carouselItems.scrollBy({
+    left: 250,
+    behavior: 'smooth'
+  });
+});
